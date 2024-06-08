@@ -1,0 +1,46 @@
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* ряды контейнера*/
+    grid-template-rows: 1fr, 1fr;
+    /* отступы между рядами и колонками */
+    gap: 10px;
+    /* расставим по рядам и столбцам */
+    grid-template-areas: 
+    "one two three"
+    "one four five";
+}
+.image {
+    /* картинки под размер ячеек*/
+    width: 100%;
+    height: 100%;
+    /* картинка занимает все доступное пространство и не деформируется */
+    object-fit: cover;
+}
+.image-one {
+    /* с какой вертикальной линии начнется изображение 
+    grid-row-start: 1;
+    на какой горизонтальной линии начнется картинка 
+    grid-column-start: 1;
+    до какой вертикальной линии дотяниться картинка 
+    grid-row-end: 3;
+    до какой горизонтальной линии дотяниться картинка
+    grid-column-end: 2; */
+
+    /* grid-area: 1/1/3/2; */
+
+    grid-area: one;
+
+}
+.image-two {
+    grid-area: two;
+}
+.image-three {
+    grid-area: three;
+}
+.image-four {
+    grid-area: four;
+}
+.image-five {
+    grid-area: five;
+}
